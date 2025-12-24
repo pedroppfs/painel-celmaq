@@ -1,0 +1,58 @@
+# ========================================
+# .gitignore - Painel de Controle Celmaq
+# ========================================
+
+# Arquivos do macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Arquivos do Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Arquivos do sistema
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.log
+
+# Node modules (se adicionar posteriormente)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos temporários
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Arquivos de backup
+*.bak
+*.backup
+*~
+
+# Certificados e chaves (NUNCA commitar)
+*.pem
+*.key
+*.cert
+
+# IMPORTANTE: NÃO commitar arquivos de configuração sensíveis
+# Se você criar versões locais de config, ignore-as:
+# config.local.js
+# .env
+# .env.local
+
+# Arquivos de teste
+test-*.html
+test-*.js
+debug-*.html
+debug-*.js
+
