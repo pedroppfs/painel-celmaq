@@ -1,0 +1,503 @@
+/*
+ * ======================================
+ * PAINEL DE CONTROLE CELMAQ
+ * Estilo Dark, Clean, Flat
+ * Otimizado para TVs 1920x1080
+ * ======================================
+ */
+
+/* ========== RESET E CONFIGURAÇÕES GLOBAIS ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #0a0a0b;
+    color: #d1d1d6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========== CONTAINER PRINCIPAL ========== */
+.app-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #0a0a0b;
+}
+
+/* ========== CABEÇALHO ========== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 45px 30px 45px;
+    background-color: #0a0a0b;
+    border-bottom: 2px solid #28272a;
+    flex-shrink: 0;
+}
+
+/* Logo */
+.header-section {
+    flex: 1;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 31px;
+    width: auto;
+}
+
+/* Título Central */
+.title-section {
+    text-align: center;
+}
+
+.main-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.subtitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: #acacac;
+    letter-spacing: 0.3px;
+}
+
+/* Relógio e Data */
+.datetime-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
+}
+
+.clock {
+    font-size: 32px;
+    font-weight: 700;
+    color: #4ade80;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+.date {
+    font-size: 15px;
+    font-weight: 400;
+    color: #acacac;
+    letter-spacing: 0.3px;
+}
+
+/* ========== CONTEÚDO PRINCIPAL ========== */
+.content {
+    flex: 1;
+    padding: 0 45px 45px 45px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 0; /* Permite que o flex funcione corretamente */
+}
+
+/* ========== TABELA ========== */
+.table-container {
+    margin-top: 30px;
+    background-color: #0e0e10;
+    border: 1px solid #28272a;
+    border-radius: 14px;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0; /* Permite que o flex funcione corretamente */
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    height: 100%; /* Ocupa toda altura disponível */
+}
+
+/* Cabeçalho da Tabela */
+.data-table thead {
+    background-color: #151517;
+    border-bottom: 2px solid #28272a;
+}
+
+.data-table thead th {
+    padding: 22px 30px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+    color: #acacac;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Larguras das Colunas */
+.col-id { width: 95px; }
+.col-cliente { width: 190px; }
+.col-data { width: 105px; }
+.col-tensao { width: 70px; }
+.col-produto { width: 120px; }
+.col-montador { width: 140px; }
+.col-ajudante { width: 100px; }
+.col-local { width: 160px; }
+.col-status { width: 125px; }
+.col-metodo { width: 140px; }
+.col-etapa { width: 150px; }
+
+/* Corpo da Tabela */
+.data-table tbody {
+    height: 100%; /* Ocupa toda altura disponível */
+}
+
+.data-table tbody tr {
+    border-bottom: 1px solid #232329;
+    height: 12.5%; /* 100% ÷ 8 linhas = 12.5% cada */
+    transition: background-color 0.2s ease;
+}
+
+.data-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.data-table tbody td {
+    padding: 2vh 30px; /* 2vh = 2% da altura da viewport */
+    font-size: 16px;
+    font-weight: 400;
+    color: #d1d1d6;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle; /* Centraliza verticalmente */
+}
+
+/* ========== ESTILOS ESPECÍFICOS DE CÉLULAS ========== */
+/* 
+ * REGRA DE TRUNCAMENTO:
+ * - Campos que NUNCA truncam (sempre visíveis): ID, Tensão, Status
+ * - Campos que podem truncar com "...": Cliente, Produto, Montador, 
+ *   Ajudante, Local de Entrega, Método de Envio, Etapa
+ */
+
+/* ID do Pedido - NUNCA TRUNCAR */
+.cell-id {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    color: #60a5fa;
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: clip !important;
+}
+
+/* Data de Entrega */
+.cell-data {
+    font-size: 14.1px;
+    font-weight: 700;
+    color: #fbbf24;
+}
+
+/* Tensão - NUNCA TRUNCAR */
+.cell-tensao {
+    font-size: 13.2px;
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: clip !important;
+    /* Removi display: flex para manter alinhamento vertical consistente */
+}
+
+.tensao-icon {
+    width: 14px;
+    height: 14px;
+}
+
+/* Cliente */
+.cell-cliente {
+    font-size: 15px;
+}
+
+/* Produto */
+.cell-produto {
+    font-size: 15px;
+}
+
+/* Montador */
+.cell-montador {
+    font-size: 13.6px;
+}
+
+/* Ajudante */
+.cell-ajudante {
+    font-size: 13.7px;
+}
+
+/* Local */
+.cell-local {
+    font-size: 14.4px;
+}
+
+/* Status Badge - NUNCA TRUNCAR */
+.cell-status {
+    padding: 0 !important;
+    overflow: visible !important;
+    white-space: nowrap !important;
+    text-overflow: clip !important;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 17px;
+    border-radius: 22px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Status: Confirmado */
+.status-confirmado {
+    background-color: rgba(74, 222, 128, 0.15);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    color: #4ade80;
+}
+
+/* Status: Pendente */
+.status-pendente {
+    background-color: rgba(251, 191, 36, 0.15);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    color: #fbbf24;
+}
+
+/* Status: Em Produção */
+.status-producao {
+    background-color: rgba(96, 165, 250, 0.15);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    color: #60a5fa;
+}
+
+/* Status: Atrasado */
+.status-atrasado {
+    background-color: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+}
+
+/* Status: Entregue */
+.status-entregue {
+    background-color: rgba(74, 222, 128, 0.15);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    color: #4ade80;
+}
+
+/* Método de Envio */
+.cell-metodo {
+    font-size: 14px;
+}
+
+/* Etapa */
+.cell-etapa {
+    font-size: 15px;
+}
+
+/* ========== SCROLLBAR CUSTOMIZADA ========== */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #0e0e10;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #28272a;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #3a393d;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+/* Telas menores que 1920px (ajusta automaticamente) */
+@media screen and (max-height: 1080px) {
+    .main-title {
+        font-size: 2.5vh; /* 2.5% da altura da viewport */
+    }
+    
+    .subtitle {
+        font-size: 1.2vh;
+    }
+    
+    .clock {
+        font-size: 2.2vh;
+    }
+    
+    .date {
+        font-size: 1.2vh;
+    }
+    
+    .data-table thead th {
+        font-size: 1.1vh;
+        padding: 1.5vh 30px;
+    }
+    
+    .data-table tbody td {
+        font-size: 1.3vh; /* Ajusta proporcionalmente */
+    }
+    
+    .status-badge {
+        font-size: 1.1vh;
+        padding: 0.6vh 1.5vh;
+    }
+}
+
+/* Telas muito pequenas (laptops, etc) */
+@media screen and (max-height: 900px) {
+    .header {
+        padding: 1.5vh 45px;
+    }
+    
+    .content {
+        padding: 0 45px 2vh 45px;
+    }
+    
+    .table-container {
+        margin-top: 2vh;
+    }
+    
+    .data-table thead th {
+        font-size: 1vh;
+        padding: 1vh 20px;
+    }
+    
+    .data-table tbody td {
+        font-size: 1.2vh;
+        padding: 1vh 20px;
+    }
+}
+
+/* ========== ANIMAÇÕES E ROTAÇÃO ========== */
+
+/* Animação de entrada das linhas */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* Animação de slide para cima */
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.data-table tbody tr {
+    animation: slideUp 0.4s ease-out;
+}
+
+/* Classe para fade out */
+.data-table tbody.fade-out tr {
+    animation: fadeOut 0.3s ease-out forwards;
+}
+
+/* Indicador de Página/Progresso */
+.pagination-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.page-info {
+    font-size: 14px;
+    color: #acacac;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.page-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.page-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #28272a;
+    transition: all 0.3s ease;
+}
+
+.page-dot.active {
+    background-color: #4ade80;
+    width: 24px;
+    border-radius: 5px;
+}
+
+/* Barra de progresso */
+.progress-bar-container {
+    width: 200px;
+    height: 4px;
+    background-color: #28272a;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #4ade80, #60a5fa);
+    border-radius: 2px;
+    transition: width 0.1s linear;
+    width: 0%;
+}
+

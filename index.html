@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle Celmaq</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Container Principal -->
+    <div class="app-container">
+        
+        <!-- Cabeçalho -->
+        <header class="header">
+            <!-- Logo -->
+            <div class="header-section logo-section">
+                <img src="src/assets/logo-celmaq.png" alt="Logo Celmaq" class="logo">
+            </div>
+            
+            <!-- Título Central -->
+            <div class="header-section title-section">
+                <h1 class="main-title">Painel de Controle Celmaq</h1>
+                <p class="subtitle">Sistema de Controle de Produção e Entregas</p>
+            </div>
+            
+            <!-- Relógio e Data -->
+            <div class="header-section datetime-section">
+                <div class="clock" id="clock">00:00:00</div>
+                <div class="date" id="date">Carregando...</div>
+            </div>
+        </header>
+
+        <!-- Tabela de Dados -->
+        <main class="content">
+            <div class="table-container">
+                <table class="data-table">
+                    <!-- Cabeçalho da Tabela -->
+                    <thead>
+                        <tr>
+                            <th class="col-id">ID PEDIDO</th>
+                            <th class="col-cliente">CLIENTE</th>
+                            <th class="col-data">DATA ENTREGA</th>
+                            <th class="col-tensao">TENSÃO</th>
+                            <th class="col-produto">PRODUTO</th>
+                            <th class="col-montador">MONTADOR</th>
+                            <th class="col-ajudante">AJUDANTE</th>
+                            <th class="col-local">LOCAL DE ENTREGA</th>
+                            <th class="col-status">STATUS</th>
+                            <th class="col-metodo">MÉTODO ENVIO</th>
+                            <th class="col-etapa">ETAPA</th>
+                        </tr>
+                    </thead>
+                    
+                    <!-- Corpo da Tabela - Será preenchido via JavaScript -->
+                    <tbody id="tableBody">
+                        <!-- As linhas serão inseridas dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Indicador de Página -->
+            <div class="pagination-indicator" id="paginationIndicator">
+                <div class="page-info" id="pageInfo">Página 1 de 1</div>
+                <div class="page-dots" id="pageDots"></div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script src="src/scripts/config.js"></script>
+    <script src="src/scripts/googleSheets.js"></script>
+    <script src="src/scripts/app.js"></script>
+</body>
+</html>
+

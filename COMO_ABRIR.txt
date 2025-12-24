@@ -1,0 +1,92 @@
+═══════════════════════════════════════════════════════════════
+  🏭 PAINEL DE CONTROLE CELMAQ - COMO ABRIR
+═══════════════════════════════════════════════════════════════
+
+📂 LOCALIZAÇÃO DO ARQUIVO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Arquivo: index.html
+Pasta: painel-celmaq/
+
+
+🚀 MÉTODO 1: DUPLO CLIQUE (MAIS FÁCIL)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Localize o arquivo "index.html"
+2. Dê DUPLO CLIQUE no arquivo
+3. O painel abrirá automaticamente no navegador
+
+
+🖥️ MÉTODO 2: ABRIR NO NAVEGADOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Abra o Google Chrome (recomendado)
+2. Pressione Cmd+O (Mac) ou Ctrl+O (Windows)
+3. Navegue até a pasta "painel-celmaq"
+4. Selecione "index.html"
+5. Clique em "Abrir"
+
+
+📺 MÉTODO 3: MODO TELA CHEIA PARA TV
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Abra o arquivo index.html (método 1 ou 2)
+2. Pressione F11 no teclado
+3. O painel ocupará toda a tela
+4. Para sair do modo tela cheia, pressione F11 novamente
+
+
+⚠️ IMPORTANTE - LOGO CELMAQ
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+A logo atual é um PLACEHOLDER temporário!
+
+Para usar a logo real:
+1. Exporte a logo do Figma como PNG
+2. Salve em: painel-celmaq/src/assets/
+3. Renomeie para: logo-celmaq.png
+4. Atualize o arquivo index.html se necessário
+
+
+✅ O QUE VOCÊ DEVE VER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Logo Celmaq (placeholder) no canto superior esquerdo
+✓ Título "Painel de Controle Celmaq" no centro
+✓ Relógio verde no canto superior direito (atualizando)
+✓ Data por extenso abaixo do relógio
+✓ Tabela com 10 linhas de dados de exemplo
+✓ Badges coloridos na coluna "STATUS"
+✓ Fundo escuro (preto)
+
+
+🔧 SOLUÇÃO DE PROBLEMAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+❌ PROBLEMA: Logo não aparece
+   ✅ SOLUÇÃO: É normal, use a logo placeholder ou substitua
+
+❌ PROBLEMA: Relógio não atualiza
+   ✅ SOLUÇÃO: Recarregue a página (F5 ou Cmd+R)
+
+❌ PROBLEMA: Tabela vazia
+   ✅ SOLUÇÃO: Abra o Console (F12) e verifique erros
+
+❌ PROBLEMA: Layout quebrado
+   ✅ SOLUÇÃO: Use Chrome e verifique zoom (100%)
+
+
+📖 MAIS INFORMAÇÕES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Leia os seguintes arquivos para mais detalhes:
+• README.md - Documentação completa
+• INSTRUCOES.md - Guia detalhado de uso
+• CHECKLIST.md - Lista de validação
+
+
+🎯 NAVEGADORES RECOMENDADOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Google Chrome (MELHOR OPÇÃO)
+2. Microsoft Edge
+3. Firefox
+4. Safari
+
+
+═══════════════════════════════════════════════════════════════
+  Desenvolvido por High Digital para CELMAQ
+  Dezembro 2024
+═══════════════════════════════════════════════════════════════
+
